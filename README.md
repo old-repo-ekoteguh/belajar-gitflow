@@ -19,3 +19,14 @@
 * Tambah file/folder di dalam branch <nama-fitur> tsb.
 * Sebelum merge fitur tsb, alangkah baiknya ada proses code-review dan pull request
 * Jangan jalankan perintah `git flow feature finish` -> Push ke origin dengan perintah `git flow feature publish`
+
+### Release
+* Gunakan perintah `git flow release start <nama rilis/versi>`, secara otomatis akan membuat branch baru bernama `release/<nama rilis/versi>`
+* Untuk rilis, pastikan tahapan sebelum rilis sudah dikerjakan Minify (CSS, JS, Image Optimization), Config file (config, .env), dkk
+* Jika sudah selesai semua, baru jalankan perintah `git flow release finish <nama rilis/versi>`
+
+Contoh:
+`git flow release start 'v1.0'`
+`git flow release finish 'v1.0'`
+
+* Jangan lupa untuk update dulu origin/master dengan perintah `git push origin master --tags`
